@@ -1,0 +1,23 @@
+
+UserProfile: name, email, phone, resumeText, skills, linkedinUrl, portfolioUrl, emailConnected, emailAddress
+Job: id, title, company, location, salary, description, tags, matchScore, isRemote, postedAt
+Application: id, jobId, status (saved/applied/interviewing/offered/rejected), tailoredResume, coverLetter, recruiterEmail, recruiterName, appliedAt, notes, followUpDate
+FollowUp: id, applicationId, scheduledAt, message, sent, sentAt
+Stats: totalApplied, totalResponded, totalInterviewing, totalOffered, avgMatchScore, responseRate
+Endpoints:
+
+GET /profile - get user profile
+PUT /profile - update profile
+GET /jobs - get swipe feed (list of jobs)
+GET /jobs/{id} - get job details
+POST /jobs/{id}/save - save a job
+POST /jobs/{id}/apply - apply to a job
+GET /applications - list all applications
+PUT /applications/{id} - update application status
+POST /applications/{id}/follow-ups - schedule a follow-up
+GET /stats - get user stats
+Now I'm setting up OpenAI integration...
+
+I can work on the OpenAPI spec and OpenAI setup in parallel, then move into copying templates, running codegen with a database push, launching the design subagent, and building out the backend.
+
+write the OpenAPI spec and set up OpenAI simultaneously.
